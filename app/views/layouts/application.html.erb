@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <div class="container mt-5 mb-5">
+    <div class="container mt-5 mb-5 col-md-4">
       <% if user_signed_in? %>
         <%= link_to 'Sign out', destroy_user_session_path, method: :delete %> <br>
         <small>Hello: </small><%= current_user.email %>
@@ -20,8 +20,8 @@
     </div>
 
     <div class="container mt-5 mb-5">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <p class="text-success"><%= notice %></p>
+      <p class="text-danger"><%= alert %></p>
     </div>
 
     <%= yield %>
