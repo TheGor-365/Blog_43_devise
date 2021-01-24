@@ -12,7 +12,8 @@
   <body>
     <div class="container mt-5 mb-5">
       <% if user_signed_in? %>
-        <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+        <%= link_to 'Sign out', destroy_user_session_path, method: :delete %> <br>
+        <small>Hello: </small><%= current_user.email %>
       <% else %>
         <%= link_to 'Sign in', new_user_session_path %>
       <% end %>
