@@ -2,7 +2,7 @@
   <h2>Contact us</h2>
 </div>
 
-<div class="container p-3 border rounded col-md-6">
+<div class="container p-5 bg-light border rounded col-md-6">
   <%= form_for :contact, url: contacts_path do |f| %>
     <% if @contact && @contact.errors.any? %>
       <p>
@@ -16,12 +16,12 @@
       </p>
     <% end %>
     <p>
-      <%= f.label :email %><br>
-      <%= f.text_field :email %>
+      <%= f.label :email, class: 'form-label' %><br>
+      <%= f.text_field :email, class: 'form-control' %>
     </p>
     <p>
-      <%= f.label :message %><br>
-      <%= f.text_area :message %>
+      <%= f.label :message, class: 'form-label' %><br>
+      <%= f.text_area :message, class: 'form-control' %>
     </p>
 
     <%= f.submit 'Send message', class: 'btn btn-primary mt-3' %>
